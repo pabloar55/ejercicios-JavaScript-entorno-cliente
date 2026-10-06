@@ -5,11 +5,9 @@ entrada sólo consta de letras minúsculas y/o espacios.*/
  * @param {string} cadena
  */
 function devuelveVocales(cadena){
-    const valores = "aeiou";
-    if (valores.includes(cadena)){
-        return true;
-    }
-    
-    return false;
+    const regExp = /[aeiou]/g;
+    const arrayCoincidencias = cadena.match(regExp);
+    return arrayCoincidencias ? arrayCoincidencias.length : 0;
 }
-console.log(devuelveVocales("rte"));
+ // console.log(devuelveVocales("ppp"));
+ // console.log(devuelveVocales("hola"));
