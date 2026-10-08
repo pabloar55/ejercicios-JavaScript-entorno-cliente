@@ -16,6 +16,9 @@ Entrada: 123456789 Salida: 987654321
  * @param {number} numero 
  */
 function devuelveMayor(numero) {
+    if (!Number.isInteger(numero) || numero < 0){
+        return "Entrada no valida";
+    }
     let resultado = "";
     for (let i = 9; i >= 0; i--) {
         for (let aux = numero; aux > 0; aux = Math.trunc(aux / 10)) {
@@ -39,6 +42,7 @@ function devuelveMayorFacil(numero) {
 console.log(devuelveMayor(42145));
 console.log(devuelveMayor(145263));
 console.log(devuelveMayor(123456789));
+console.log(devuelveMayor(1.2));
 
 console.log(devuelveMayorFacil(42145));
 console.log(devuelveMayorFacil(145263));
