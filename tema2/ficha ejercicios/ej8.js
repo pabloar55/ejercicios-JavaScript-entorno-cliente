@@ -15,17 +15,16 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3]
  * @param {Array} array1 
  * @param {Array} array2 
  */
-function arrayDiff(array1, array2){
-   for (let i = 0 ; i< array2.length; i++) {
-        for (let j = 0 ; j < array1.length; j++){
-            if (array2.at(i) === array1.at(j)){
+function arrayDiff(array1, array2) {
+    for (let i = 0; i < array2.length; i++) {
+        for (let j = array1.length - 1; j >= 0; j--) {
+            if (array2.at(i) === array1.at(j)) {
                 array1.splice(j, 1);
-                j--;
             }
         }
     }
     return array1;
 }
 
-console.log(arrayDiff([1,2], [1]));
-console.log(arrayDiff([1,2,2,2,3,2],[2, 3])); 
+console.log(arrayDiff([1, 2], [1]));
+console.log(arrayDiff([1, 2, 2, 2, 3, 2], [2, 3])); 
