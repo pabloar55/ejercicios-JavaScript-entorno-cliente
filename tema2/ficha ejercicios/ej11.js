@@ -11,21 +11,23 @@ que cumplan el teorema dado un número natural pasado como argumento.
  * @param {number} numero
  */
 function devuelveCuatroNumerosLagrange(numero) {
-  let valor1;
-  let valor2;
-  let valor3;
-  let valor4;
-  do {
-    valor1 = Math.floor(Math.random() * (numero + 1));
-    valor2 = Math.floor(Math.random() * (numero + 1));
-    valor3 = Math.floor(Math.random() * (numero + 1));
-    valor4 = Math.floor(Math.random() * (numero + 1));
-  } while (
-    numero !==
-    valor1 * valor1 + valor2 * valor2 + valor3 * valor3 + valor4 * valor4
-  );
-
-  return [valor1, valor2, valor3, valor4];
+  let arrayResultado = Array();
+  let valorActual = 0;
+  for (numero; arrayResultado.length <= 3; numero -= valorActual * valorActual) {
+    valorActual = 0;
+    for (valorActual; valorActual <= numero; valorActual++) {
+      if (valorActual * valorActual > numero) {
+        valorActual--;
+        arrayResultado.push(valorActual);
+        break;
+      }
+      if (valorActual * valorActual === numero) {
+        arrayResultado.push(valorActual);
+        break;
+      }
+    }
+  }
+  return arrayResultado;
 }
 
-console.log(devuelveCuatroNumerosLagrange(500));
+console.log(devuelveCuatroNumerosLagrange(30));
