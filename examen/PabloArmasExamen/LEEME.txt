@@ -1,0 +1,8 @@
+INSTRUCCIONES
+
+1. Completa Ejercicio1.js, Ejercicio2.js y Ejercicio3.js.
+2. Ejecuta las pruebas con: node test.js
+3. Entrega únicamente los tres archivos JS de ejercicios dentro del ZIP solicitado.
+4. No entregues test.js.
+
+Las pruebas públicas son orientativas. La corrección utiliza casos adicionales.
