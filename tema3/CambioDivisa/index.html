@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="pintarUI.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <form action="" id="idForm">
+            <label for="idImporte">Importe</label>
+            <input type="number" name="importe" id="idImporte">
+            <label for="deID">de</label>
+            <select id="deID" name="de">
+                <option value="euro">Euros</option>
+                <option value="dolar">Dolares</option>
+                <option value="libra">Libras</option>
+            </select>
+            <label for="aID">a</label>
+            <select id="aID" name="a">
+                <option value="euro">Euros</option>
+                <option value="dolar">Dolares</option>
+                <option value="libra">Libras</option>
+            </select>
+            <input type="submit" value="Cambiar" name="cambiar">
+        </form>
+        <div id="resultado"></div>
+    </main>
+</body>
+
+</html>
