@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas y sus Amigos: Gestor de Trenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚂 Thomas y sus Amigos: Gestor de Trenes</h1>
+    </header>
+
+    <main>
+        <!-- 1. Registro de trenes -->
+        <section class="seccion">
+            <h2>Registrar Nuevo Tren</h2>
+            <form id="formTren" class="form-registro">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="Vapor">Vapor</option>
+                        <option value="Diésel">Diésel</option>
+                        <option value="Eléctrico">Eléctrico</option>
+                        <option value="Maglev">Maglev</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="velocidad">Velocidad (km/h):</label>
+                    <input type="number" id="velocidad" name="velocidad" min="10" max="300" required>
+                </div>
+                <div class="campo">
+                    <button type="submit" class="boton">Añadir Tren</button>
+                </div>
+            </form>
+            <p id="errorTren" class="error"></p>
+        </section>
+
+        <!-- 2. Simulador de viajes -->
+        <section class="seccion simulador">
+            <h2>Simulador de Viajes</h2>
+            <form id="formViaje" class="form-viaje">
+                <div class="campo">
+                    <label for="origen">Estación Origen:</label>
+                    <select id="origen" name="origen"></select>
+                </div>
+                <div class="campo">
+                    <label for="destino">Estación Destino:</label>
+                    <select id="destino" name="destino"></select>
+                </div>
+                <div class="campo">
+                    <label for="trenViaje">Selecciona Tren:</label>
+                    <select id="trenViaje" name="trenViaje"></select>
+                </div>
+                <div class="campo">
+                    <button type="submit" class="boton">Simular Viaje</button>
+                </div>
+            </form>
+            <div id="resultadoViaje"></div>
+        </section>
+
+        <!-- 3. Listado de trenes -->
+        <section class="seccion">
+            <h2>Listado de Trenes</h2>
+            <div class="buscador">
+                <input type="text" id="busqueda" placeholder="Buscar por nombre o tipo...">
+                <button type="button" id="botonBuscar">Buscar</button>
+            </div>
+            <div id="listado" class="listado"></div>
+            <button type="button" id="botonBorrar" class="boton">Borrar Todos los Trenes</button>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
